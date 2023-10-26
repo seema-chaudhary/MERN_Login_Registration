@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Signup from './Signup'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Login from './Login'
 
 function App() {
 
   return (
-    <div>
-      <Signup />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/register' element={<Signup/>}/>
+        <Route path='/login' element={<Login/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
